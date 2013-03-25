@@ -1,0 +1,19 @@
+A simple tool to relink Final Cut Pro X events with .RMD files generated
+elsewhere.
+
+This is a little helper script that aides in a particular workflow
+when using RED cameras and FCP-X.  There's an issue in FCP-X when not
+copying the original R3D files into a FCPX Event.  If there was no
+.RMD sidecar when the clip was imported, and a RMD was later generated
+by REDCINE-X (or other software), FCPX will not find the .RMD file.
+
+This script creates the appropriate links back to the original RMD
+files for use by FCPX.
+
+usage: fcpx_rmd_relink.py [-h] source_dir event_dir
+
+Relink RMDs with FCPX Events
+
+positional arguments:
+  source_dir  Path to your .RDC directories
+  event_dir   Path to the FCP Event directory
